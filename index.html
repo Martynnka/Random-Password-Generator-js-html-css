@@ -15,14 +15,36 @@
                 <p class = "HeadingP">Never use an insecure password again.</p>
                 <p1 class = "Line"></p1>
                 <button class = "GenerateButton" onclick = "showpasswords()">Generate password</button>
-
+                        <div class="range-container">
+                        <label>Password length: <span id="lengthValue">15</span></label>
+                        <input 
+                            type="range"
+                            id="passwordRange"
+                            min="6"
+                            max="15"
+                            value="15"
+                            step="1"
+                        >
+                    </div>
                     <div class = "Rectangle">
-                    <p id ="RandomPassword"></p>
+                    <p id ="RandomPassword" ></p>
+                    </div>
+                    <div class = "Rectangle1">
+                        <p id ="RandomPassword1"></p>
                     </div>
 
-                    <div class = "Rectangle1">
-                    <p id ="RandomPassword1"></p>
+                    <div class="options">
+                    <label>
+                        <input type="checkbox" id="symbolsCheck">
+                        Symbols
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="numbersCheck">
+                        Numbers
+                    </label>
                     </div>
+
             </div>
         </main>
         <h1></h1>
