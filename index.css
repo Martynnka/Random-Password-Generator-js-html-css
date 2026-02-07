@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  background: #1C1C1C;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   
+  align-items: flex-start;   
+  padding-top: 64px;       
+}
+
+.unpopulated-state {
+  position: relative; 
+  width:  550px;
+  height: 750px;
+  background: #1F2937;
+  border-radius: 5px;
+}
+
+.Line{
+  position:absolute;
+  top: 361px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 446px;
+  border: 1px solid #2F3E53;
+}
+
+.Rectangle1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top: 396px;
+    left: 50%;
+    transform: translateX(calc(-50% - 118px));
+    width:211px;
+    height:39px;
+    background:#273549;
+    border-radius:6px;
+}
+
+.Rectangle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top: 396px;
+    left: 50%;
+    transform: translateX(calc(-50% + 118px));
+    width:211px;
+    height:39px;
+    background:#273549;
+    border-radius:6px;
+}
+
+.Rectangle1 p, .Rectangle p {
+color: #10B981;
+}
+
+.GenerateButton
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 17px 9px 15px;
+gap: 12px;
+
+position: absolute;
+width: 191px;
+height: 42px;
+left: 52px;
+top: 284px;
+
+background: #10B981;
+
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+border-radius: 6px;
+border: none;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+
+}
+
+.Heading 
+{
+position: absolute;
+width: 354px;
+height: 80px;
+left: 52px;
+top: 115px;
+
+font-family: 'Karla';
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 40px;
+letter-spacing: -0.025em;
+
+color: #FFFFFF;
+
+
+}
+
+.Heading1 
+{
+
+position: absolute;
+width: 354px;
+height: 50px;
+left: 52px;
+top: 155px;
+
+font-family: 'Karla';
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 40px;
+letter-spacing: -0.025em;
+
+color: #10B981;
+}
+
+.HeadingP
+{
+
+position: absolute;
+width: 372px;
+height: 28px;
+left: 52px;
+top: 205px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+
+color: #D5D4D8;
+
+
+}
