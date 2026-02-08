@@ -1,31 +1,49 @@
 # Password Generator (Scrimba Project)
 
-Simple random password generator built while learning **JavaScript + HTML + CSS** through Scrimba.
+Random password generator built while learning **JavaScript + HTML + CSS** on Scrimba.
 
-The app generates **two random passwords** at once and displays them in two rectangles after clicking the **Generate password** button.
+Generates **two passwords at once** and displays them in two output boxes after clicking **Generate password**.
+
+## Preview
+- Dark UI inspired by the Scrimba/Figma design
+- Outputs: 2 password rectangles
+- Controls:
+  - Password length slider (**6–15**)
+  - Toggle **Numbers** and **Symbols**
 
 ## Features
-- Generates **2 random passwords** on one click
-- Uses a character set with:
-  - Uppercase letters (A–Z)
-  - Lowercase letters (a–z)
-  - Numbers (0–9)
-  - Symbols (`~!@#$...`)
-- Clean UI styled to match the Scrimba/Figma design
-- Google Fonts included (**Inter** + **Karla**)
+- ✅ Generates **2 random passwords** on one click
+- ✅ Password length controlled with a **range slider (6–15)**
+- ✅ Character set is built dynamically:
+  - Always includes **letters (A–Z, a–z)**
+  - Optionally includes **numbers (0–9)** via checkbox
+  - Optionally includes **symbols (~, !, @, #, …)** via checkbox
+- ✅ Clean UI + container shadow
+- ✅ Google Fonts: **Inter** + **Karla**
 
 ## Tech Stack
 - HTML
 - CSS
-- JavaScript (DOM + Math.random)
+- JavaScript (DOM, events, `Math.random()`)
 
 ## How it works
-- `showpasswords()` runs two functions and updates the DOM:
-  - `RandomNumber()` → updates `#RandomPassword`
-  - `RandomNumber1()` → updates `#RandomPassword1`
+- **`showpasswords()`** generates and renders both passwords:
+  - Updates `#RandomPassword`
+  - Updates `#RandomPassword1`
 
-Passwords are currently generated with length **9** characters.
+### Password generation logic
+- **`getActiveCharacters()`** builds the allowed character list:
+  - Starts from letters
+  - Adds numbers if `#numbersCheck` is checked
+  - Adds symbols if `#symbolsCheck` is checked
+- **`RandomNumber()`** and **`RandomNumber1()`** generate passwords using:
+  - `Math.floor(Math.random() * activeChars.length)`
+  - Loop runs `passwordLength` times
+
+### Length slider
+- `#passwordRange` controls `passwordLength`
+- `#lengthValue` shows current length live
+- Slider fill is updated with `updateRangeFill()` using a linear-gradient background
 
 ## Run locally
-Just open `index.html` in the browser.
-
+https://jazzy-queijadas-a7595a.netlify.app/
